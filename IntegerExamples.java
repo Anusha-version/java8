@@ -17,6 +17,16 @@ public class IntegerExamples{
        long count =  myList.stream().count();
         System.out.println(count);  
      }
+    
+     public static void printSortValues(){
+        List<Integer> list = Arrays.asList(10,15,8,49,25,98,32);
+       myList.stream().sorted().forEach(System.out::println);
+     }
+    
+    public static void printSortDesendingValues(){
+        List<Integer> list = Arrays.asList(10,15,8,49,25,98,32);
+       myList.stream().sorted(Collections.reverseOrder()).forEach(System.out::println);
+     }
   
     public static void printMaxElement() {
           List<Integer> myList = Arrays.asList(10,15,8,49,25,98,98,32,15);
