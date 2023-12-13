@@ -34,6 +34,17 @@ IntStream.concat(Arrays.stream(input1),Arrays.stream(input2)).sorted().toArray()
 //Merge two sorted Arrays into sorted array without duplicates
 IntStream.concat(Arrays.stream(input1),Arrays.stream(input2)).sorted().distinct().toArray()
 
+//Sort strings in increased order of length.
+listOfStrings.stream().sorted(Comparator.comparing(String::length)).collect(Collectors.toList());
+
+//Common elements b/w two arrays
+list1.stream().filter(list2::contains).collect(Collectors.toList());
+
+//Reverse each word of a string
+Arrays.stream(str.split(" ")).map(word-> new StringBuffer(word).reverse()).collect(Collectors.joining(" "));
+
+
+
 
 
 
