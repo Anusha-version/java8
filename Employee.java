@@ -1,3 +1,16 @@
+/**Things to know
+//  Collectors.toList(), Collectors.toSet()
+// Collectors.toUnmodificableList(), Collectors.toUnmodificableSet(), Collectors.toUnmodificableMap()
+// Collectors.toCollection(LinkedList::new),Collectors.joining(),Collectors.joining(separator,prefix,suffix)
+// Collectors.toMap(Function.identity(), String::length, (item, identicalItem) -> item);// Third argument is to handle IllegalStateException when key collision happens.
+// Collectors.collectingAndThen(toList(), ImmutableList::copyOf)
+// Collectors.groupingBy(), Collectors.partioningBy()
+// Collectors.counting(), Collectors.maxBy(Comparator),Collectors.minBy(Comparator),
+// Collectors.averagingInt(), Collectors.averagingDouble()
+// Collectors.summingInt(), Collectors.summingDouble()
+// Collectors.summarizingInt(), Collectors.summarizingDouble() -> This gives statistical data
+// Collectors.teeing()
+  
 //Number of Male and Female employess in an organization
 Map<String, Long> noOfMaleAndFemaleEmployees=
 employeeList.stream().collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
@@ -42,6 +55,9 @@ employeeList.stream().collect(Collectors.maxBy(Comparator.comparing(Employee::ge
 employeeList.stream().max(Comparator.comparing(Employee::getAge);
 
 
+
+
+  
 
 
 
