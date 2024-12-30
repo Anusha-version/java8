@@ -10,6 +10,9 @@
 // Collectors.summingInt(), Collectors.summingDouble()
 // Collectors.summarizingInt(), Collectors.summarizingDouble() -> This gives statistical data
 // Collectors.teeing()
+
+// Sort by name in ascending order
+List<Employee> sortedByNameAsc = employees.stream().sorted(Comparator.comparing(Employee::getName)).collect(Collectors.toList());
   
 //Number of Male and Female employess in an organization
 Map<String, Long> noOfMaleAndFemaleEmployees=
